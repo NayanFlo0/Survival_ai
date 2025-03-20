@@ -72,7 +72,7 @@ class Environment:
                                       self.TILE_SIZE, self.TILE_SIZE))
                     # Renders Points
                 elif self.map[i][j] == 'P':
-                    pygame.draw.circle(self.screen, self.COLOURS["YELLOW"],
+                    pygame.draw.circle(self.screen, self.COLOURS["GREEN"],
                                        (j * self.TILE_SIZE + self.TILE_SIZE // 2, i * self.TILE_SIZE + self.TILE_SIZE // 2),
                                        self.TILE_SIZE // 3)
                 # Renders Player
@@ -102,13 +102,14 @@ class Environment:
         #Display player score
         font = pygame.font.Font(None, 26)
         score_text = font.render(f"Score: {self.score}", True, self.COLOURS["BLACK"])
-        self.screen.blit(score_text, (350, 20))
+        self.screen.blit(score_text, (341, 20))
 
 
         # Check if the new location has a point
         if self.map[self.player_loc[0]][self.player_loc[1]] == 'P':
             self.score += 1
             self.map[self.player_loc[0]][self.player_loc[1]] = ' '
+
 
 
         # Handle events
