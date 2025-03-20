@@ -5,10 +5,11 @@ from Environment import *
 world_dimensions = [15, 20]
 house_shape = [4, 4]
 house_loc = [2, 2]
-player_loc = [3, 4]
-FPS = 10a
+player_loc = [7, 8]
+point_amt = 20
+FPS = 15
 clock = pygame.time.Clock()
-world = Environment(world_dimensions, house_loc=house_loc)
+world = Environment(world_dimensions, player_loc=player_loc, house_loc=house_loc)
 
 # Main game loop
 running = True
